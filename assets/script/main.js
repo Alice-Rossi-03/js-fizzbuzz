@@ -8,17 +8,39 @@
 // BONUS 2: Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 
 
+
+
 // creating for-cycle
 for (let i = 0; i <= 100; i++){
 
     if (((i % 3) === 0) && ((i % 5) === 0)){
-        console.log('FizzBuzz')
+        let divFizzBuzz = document.createElement("div");
+        let divContainer = document.getElementById("container")
+        divFizzBuzz.className = "fizz-buzz"
+        divContainer.append(divFizzBuzz) 
+        divFizzBuzz.innerHTML += 'FizzBuzz'
+        // console.log('FizzBuzz')
     } else if ((i % 3) === 0){
-        console.log('Fizz')
+        let divFizz = document.createElement("div");
+        let divContainer = document.getElementById("container")
+        divFizz.className = "fizz"
+        divContainer.append(divFizz) 
+        divFizz.innerHTML += 'Fizz'
+        // console.log('Fizz')
     } else if ((i % 5) === 0){
-        console.log('Buzz')
+        let divBuzz = document.createElement("div");
+        let divContainer = document.getElementById("container")
+        divBuzz.className = "buzz"
+        divContainer.append(divBuzz) 
+        divBuzz.innerHTML += 'Buzz'
+        // console.log('Buzz')
     } else {
-        console.log(i)
+        let divNumber = document.createElement("div");
+        let divContainer = document.getElementById("container")
+        divNumber.className = "number"
+        divContainer.append(divNumber)  
+        divNumber.innerHTML += i 
+        // console.log(i)
     }
 }
 
